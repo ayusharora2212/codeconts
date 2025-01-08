@@ -8,7 +8,7 @@ pkg_bin="$pkg_bin_dir/codeconts" # IMPORTANT: FILE PATH NOT TO BE CHANGED IN FUT
 if [[ -n $VERSION ]]; then
     pkg_version=$VERSION
 else
-    pkg_version="$(curl --silent https://raw.githubusercontent.com/ayusharora2212/codeconts-test/main/version)"
+    pkg_version="$(curl --silent https://raw.githubusercontent.com/ayusharora2212/codeconts/main/version)"
 fi
 
 mkdir $HOME/.codeconts
@@ -33,7 +33,7 @@ target_bin_name="codeconts-$os-$target_arch"
 echo "Fetching '$target_bin_name' release (version: $pkg_version)"
 echo ""
 
-curl -# -f -L -o $pkg_bin https://github.com/ayusharora2212/codeconts-test/releases/download/$pkg_version/$target_bin_name
+curl -# -f -L -o $pkg_bin https://github.com/ayusharora2212/codeconts/releases/download/$pkg_version/$target_bin_name
 curl_exit_code=$?
 
 if [ $curl_exit_code != 0 ]; then
