@@ -16,7 +16,6 @@ var rootCmd = &cobra.Command{
 }
 
 func Execute() {
-	println("running....")
 	rootCmd.AddCommand(checkmyrepoCmd.Init())
 	err := rootCmd.Execute()
 	if err != nil {

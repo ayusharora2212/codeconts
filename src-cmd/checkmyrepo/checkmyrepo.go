@@ -18,7 +18,6 @@ var checkmyrepoCmd = &cobra.Command{
 }
 
 func cmdRun(cmd *cobra.Command, args []string) {
-	println("in the check command")
 	repo, err := git.PlainOpen(".")
 	if err != nil {
 		cmd.PrintErrln("Error:this is not a git repo")
